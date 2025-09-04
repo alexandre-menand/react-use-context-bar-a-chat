@@ -2,8 +2,6 @@ import { createContext, useContext, useReducer } from 'react'
 
 import type { ChatActionType, ChatProviderType, ChatType } from './types.ts'
 
-const ChatContext = createContext<ChatProviderType | null>(null)
-
 const initChat: ChatType[] = [
   {
     id: '1',
@@ -53,8 +51,14 @@ const initChat: ChatType[] = [
 ]
 
 /**
- * Le ProviderChat va permettre "d'englober" la partie de l'application
- * ou l'on souhaite inclure le state management de nos chats
+ * Initialisation du contexte pour la gestion des chats
+ */
+
+const ChatContext = createContext<ChatProviderType | null>(null)
+
+/**
+ * Le composant ProviderChat permet d'englober la partie de l'application
+ * où l'on souhaite inclure le state management des chats.
  */
 function ChatProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(chatReducer, initChat)
@@ -67,7 +71,8 @@ function ChatProvider({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * Le Reducer permet de simplifier les modification de l'Etat dans le Provider
+ * Le reducer gère les mises à jour de l'état de manière prévisible
+ * pour le Provider.
  */
 function chatReducer(chats: ChatType[], action: ChatActionType): ChatType[] {
   const { type, payload } = action
@@ -90,7 +95,8 @@ function chatReducer(chats: ChatType[], action: ChatActionType): ChatType[] {
 }
 
 /**
- * Création d'un Hook pour une gestion simplifier des contexts dans l'application
+ * Hook personnalisé permettant d'accéder et de manipuler facilement
+ * le contexte des chats dans l'application.
  */
 function useChats() {
   const chatContext = useContext(ChatContext) as ChatProviderType

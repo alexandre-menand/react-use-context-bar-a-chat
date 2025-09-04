@@ -12,7 +12,7 @@ export function SectionPensionnaire() {
       <div className="flex items-center gap-2 mb-8">
         <div>
           <h2 className=" text-xl font-serif text-blue-950">
-            Les pensionnaires
+            Les pensionnaires de Cat's and Coffee
           </h2>
         </div>
 

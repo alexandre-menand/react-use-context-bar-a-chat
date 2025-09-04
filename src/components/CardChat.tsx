@@ -1,3 +1,4 @@
+import { RiCakeFill, RiPaletteFill, RiVipCrown2Fill } from '@remixicon/react'
 import { useState, useTransition } from 'react'
 import chatIcon from '../assets/catIcon.svg'
 import deleteIcon from '../assets/deleteIcon.svg'
@@ -43,10 +44,19 @@ export default function CardChat({ chat }: { chat: ChatType }) {
       </div>
       <h3 className="text-lg font-medium font-serif">{chat.nom}</h3>
       <p className="text-sm">{chat.description}</p>
-      <div className="flex text-xs gap-4">
-        <span>{chat.age} ans</span>
-        <span>couleur : {chat.couleur}</span>
-        {chat.race && <span>race : {chat.race}</span>}
+      <div className="flex text-xs gap-4 text-gray-500">
+        <span className="flex items-center gap-1">
+          <RiCakeFill size={16} />
+          {chat.age} ans
+        </span>
+        <span className="flex items-center gap-1">
+          <RiPaletteFill size={16} /> {chat.couleur}
+        </span>
+        {chat.race && (
+          <span className="flex items-center gap-1">
+            <RiVipCrown2Fill size={16} /> {chat.race}
+          </span>
+        )}
       </div>
     </article>
   )
