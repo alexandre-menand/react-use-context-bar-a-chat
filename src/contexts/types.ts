@@ -1,6 +1,6 @@
 import type { ActionDispatch } from 'react'
 
-export type StatusPensionnaireType = 'adopté' | 'pensionnaire'
+export type StatutPensionnaireType = 'adopté' | 'pensionnaire'
 
 export type ChatType = {
   id: string
@@ -9,7 +9,7 @@ export type ChatType = {
   couleur: string
   race?: string
   description: string
-  status: StatusPensionnaireType
+  statut: StatutPensionnaireType
 }
 
 export type ChatActionType = {

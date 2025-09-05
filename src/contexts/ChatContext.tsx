@@ -10,7 +10,7 @@ const initChat: ChatType[] = [
     couleur: 'gris',
     race: 'européen',
     description: 'Très câlin, adore les grattouilles derrière les oreilles.',
-    status: 'adopté',
+    statut: 'adopté',
   },
   {
     id: '2',
@@ -19,7 +19,7 @@ const initChat: ChatType[] = [
     couleur: 'noir',
     race: 'chartreux',
     description: 'Calme et indépendant, parfait pour une maison tranquille.',
-    status: 'pensionnaire',
+    statut: 'pensionnaire',
   },
   {
     id: '3',
@@ -28,7 +28,7 @@ const initChat: ChatType[] = [
     couleur: 'blanc',
     race: 'persan',
     description: 'Joueur et énergique, aime les enfants.',
-    status: 'adopté',
+    statut: 'adopté',
   },
   {
     id: '4',
@@ -37,7 +37,7 @@ const initChat: ChatType[] = [
     couleur: 'roux',
     race: 'maine coon',
     description: 'Grand et majestueux, très sociable avec les autres animaux.',
-    status: 'pensionnaire',
+    statut: 'pensionnaire',
   },
   {
     id: '5',
@@ -46,7 +46,7 @@ const initChat: ChatType[] = [
     couleur: 'tigré',
     race: 'bengal',
     description: 'Curieuse et espiègle, a besoin de beaucoup d’attention.',
-    status: 'adopté',
+    statut: 'adopté',
   },
 ]
 

@@ -5,7 +5,7 @@ import { DialogueAddChat } from './DialogueAddChat.tsx'
 export function SectionPensionnaire() {
   const { chats } = useChats()
   const chatPensionnaire = chats.filter(
-    (chat) => chat.status === 'pensionnaire',
+    (chat) => chat.statut === 'pensionnaire',
   )
   return (
     <section className="my-16">

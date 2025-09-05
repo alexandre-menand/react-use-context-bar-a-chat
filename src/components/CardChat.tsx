@@ -26,7 +26,7 @@ export default function CardChat({ chat }: { chat: ChatType }) {
   return (
     <article
       className={
-        (chat.status === 'adopté'
+        (chat.statut === 'adopté'
           ? 'bg-amber-50 text-amber-950'
           : 'bg-blue-50 text-blue-950') +
         (remove && ' animate-fadeout opacity-0 ') +
@@ -36,7 +36,7 @@ export default function CardChat({ chat }: { chat: ChatType }) {
       <div className="origin-left transition-all duration-75 flex gap-4 items-center lg:scale-75 lg:opacity-0 lg:group-hover:scale-100 lg:group-hover:opacity-100 ">
         <ButtonDelete callBack={deleteChat} />
 
-        {chat.status === 'pensionnaire' && <ButtonAdopte chat={chat} />}
+        {chat.statut === 'pensionnaire' && <ButtonAdopte chat={chat} />}
       </div>
 
       <div className="flex justify-center">
@@ -70,7 +70,7 @@ function ButtonAdopte({ chat }: { chat: ChatType }) {
       type: 'update',
       payload: {
         ...chat,
-        status: 'adopté',
+        statut: 'adopté',
       },
     })
   }

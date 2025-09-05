@@ -3,7 +3,7 @@ import CardChat from './CardChat.tsx'
 
 export function SectionAdopte() {
   const { chats } = useChats()
-  const chatsAdopte = chats.filter((chat) => chat.status === 'adopté')
+  const chatsAdopte = chats.filter((chat) => chat.statut === 'adopté')
   if (chatsAdopte.length === 0) return null
   return (
     <section className="my-16">

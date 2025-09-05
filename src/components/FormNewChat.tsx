@@ -12,7 +12,7 @@ export function FormNewChat({ callBack }: { callBack: () => void }) {
     age: 1,
     couleur: '',
     race: '',
-    status: 'pensionnaire',
+    statut: 'pensionnaire',
   })
 
   const classNameInput =
@@ -31,7 +31,7 @@ export function FormNewChat({ callBack }: { callBack: () => void }) {
       age: 1,
       couleur: '',
       race: '',
-      status: 'pensionnaire',
+      statut: 'pensionnaire',
     })
     callBack()
   }
